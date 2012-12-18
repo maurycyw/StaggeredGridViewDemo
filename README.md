@@ -5,7 +5,7 @@ StaggeredGridView
 
 This is a demo of StaggeredGridView. The StaggeredGridView allows the user to create a GridView with uneven rows similar to how Pinterest looks. Includes own OnItemClickListener and OnItemLongClickListener, selector, and fixed position restore.
 
-![ ](http://f.cl.ly/items/1I0n3i361o3R070y3k46/340616_1355789751.jpeg)
+<img src="http://f.cl.ly/items/1I0n3i361o3R070y3k46/340616_1355789751.jpeg" width="700px">
 
 ## Setup
 
