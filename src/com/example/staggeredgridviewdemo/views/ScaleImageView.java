@@ -112,7 +112,7 @@ public class ScaleImageView extends ImageView {
 				}
 				
 				this.setScaleType(ScaleType.CENTER_CROP);
-				setMeasuredDimension(MeasureSpec.makeMeasureSpec(width, MeasureSpec.UNSPECIFIED), MeasureSpec.makeMeasureSpec(heightC, MeasureSpec.UNSPECIFIED));
+				setMeasuredDimension(width, heightC);
 				
 			}else{
 				// need to scale to height instead
@@ -129,7 +129,7 @@ public class ScaleImageView extends ImageView {
 
 				width = height*iw/ih;
 				height-=marg;
-				setMeasuredDimension(MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY));
+				setMeasuredDimension(width, height);
 			}
 
 		}
