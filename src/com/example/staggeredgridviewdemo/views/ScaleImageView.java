@@ -79,6 +79,7 @@ public class ScaleImageView extends ImageView {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		
 		int widthMode = MeasureSpec.getMode(widthMeasureSpec);
 		int heightMode = MeasureSpec.getMode(heightMeasureSpec);
 		int width = MeasureSpec.getSize(widthMeasureSpec);
@@ -109,8 +110,10 @@ public class ScaleImageView extends ImageView {
 					heightC = height;
 					width = heightC*iw/ih;
 				}
+				
 				this.setScaleType(ScaleType.CENTER_CROP);
-				setMeasuredDimension(MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(heightC, MeasureSpec.EXACTLY));
+				setMeasuredDimension(MeasureSpec.makeMeasureSpec(width, MeasureSpec.UNSPECIFIED), MeasureSpec.makeMeasureSpec(heightC, MeasureSpec.UNSPECIFIED));
+				
 			}else{
 				// need to scale to height instead
 				int marg = 0;
@@ -120,7 +123,7 @@ public class ScaleImageView extends ImageView {
 						marg+= ((RelativeLayout) getParent().getParent()).getPaddingBottom();
 					}
 				}
-				Log.w("ATTR", "MH "+marg);
+				
 				int iw = this.getDrawable().getIntrinsicWidth();
 				int ih = this.getDrawable().getIntrinsicHeight();
 
